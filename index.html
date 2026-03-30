@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reckitt · Performance Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pink: #E8005A;
+  --coral: #FF5240;
+  --magenta: #C8006A;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* 🔥 BACKGROUND */
+.bg-factory {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,245,248,0.95)),
+    url("1-Factory-in-Nottingham-UK_1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232,0,90,0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,82,64,0.08), transparent 40%);
+  z-index: 1;
+}
+
+/* PAGE */
+.page {
+  position: relative;
+  z-index: 10;
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* LOGO */
+.logo-wrap img {
+  height: 60px;
+  filter: drop-shadow(0 4px 12px rgba(232,0,90,0.25));
+  margin-bottom: 20px;
+}
+
+/* HEADER */
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #18000d;
+}
+
+h1 span {
+  background: linear-gradient(90deg, var(--pink), var(--coral));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub {
+  margin-top: 8px;
+  color: rgba(70,5,35,0.6);
+  font-size: 14px;
+}
+
+/* CARDS */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 30px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid rgba(232,0,90,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(232,0,90,0.15);
+}
+
+.card-title {
+  font-family: 'Outfit';
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.card-desc {
+  font-size: 13px;
+  margin-top: 8px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  font-size: 11px;
+  color: rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-factory"></div>
+<div class="bg-overlay"></div>
+
+<div class="page">
+
+  <!-- LOGO -->
+  <div class="logo-wrap">
+    <img src="reckitt-logo-MASTER-RGB-1080x720px_1.jpg" alt="Reckitt Logo">
+  </div>
+
+  <!-- HEADER -->
+  <h1>Performance <span>Analytics Hub</span></h1>
+  <p class="sub">Click a card to open Power BI report</p>
+
+  <!-- CARDS -->
+  <div class="cards">
+
+    <a class="card" href="#" target="_blank">
+      <div class="card-title">📊 FPS Scorecards</div>
+      <div class="card-desc">Factory KPIs and production tracking</div>
+    </a>
+
+    <a class="card" href="#" target="_blank">
+      <div class="card-title">🔬 Lab Assessment</div>
+      <div class="card-desc">Quality and compliance insights</div>
+    </a>
+
+    <a class="card" href="#" target="_blank">
+      <div class="card-title">🏭 5S Performance</div>
+      <div class="card-desc">Lean manufacturing metrics</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    © 2025 Reckitt · Power BI Reports
+  </div>
+
+</div>
+
+</body>
+</html>
